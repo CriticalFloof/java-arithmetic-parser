@@ -49,9 +49,9 @@ public class Token {
                     break;
                 default:
                     // Multiline Token Resolution
-                    if(Character.isDigit(src.get(0))){
+                    if(Character.isDigit(src.get(0)) || src.get(0).equals('.')){
                         String num = "";
-                        while(src.size() > 0 && Character.isDigit(src.get(0))){
+                        while(src.size() > 0 && (Character.isDigit(src.get(0)) || src.get(0).equals('.'))){
                             num += src.remove(0);
                         }
 
